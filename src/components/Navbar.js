@@ -8,7 +8,9 @@ export default class Navbar extends Component{
       <div className='nav'>
         <div>Odin CV Application</div>
         <img alt='react logo' src={reactLogo} />
-        <img alt='github logo' href='https://github.com/antinf' src={githubLogo} />
+        <a href='https://github.com/antinf'>
+          <img alt='github logo' src={githubLogo} />
+        </a>
       </div>
     );
   }
