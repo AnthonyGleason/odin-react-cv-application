@@ -1,3 +1,26 @@
 body {
   background-color: gray;
 }
+
+/* edit image styling */
+.edit {
+  cursor: pointer;
+}
+
+/* navbar */
+
+.nav img {
+  height: 50px;
+  width: 50px;
+}
+
+/* general section */
+
+.general {
+  background-color: aliceblue;
+}
+
+.general .linkedin-img {
+  height: 30px;
+  width: 30px;
+}
