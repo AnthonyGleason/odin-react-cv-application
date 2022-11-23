@@ -27,7 +27,7 @@ export default class Skills extends Component{
         to the skills array. 
         */}
         <SkillsContainer skillArray={this.state.skillArray} />
-        <img className='add' onClick={()=>{this.addSkill(new Skill(0,'Placeholder'))}} alt='add' src={addImg} />
+        <img className='add' onClick={()=>{this.addSkill(new Skill(0.5,'Placeholder'))}} alt='add' src={addImg} />
       </div>
     );
   };
@@ -36,7 +36,6 @@ export default class Skills extends Component{
     this.setState({
       skillArray: this.state.skillArray.concat(skill),
     });
-    console.log(this.state.skillArray);
   };
 };
 
