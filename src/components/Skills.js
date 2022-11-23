@@ -14,9 +14,7 @@ export default class Skills extends Component{
   constructor(){
     super();
     this.state = {
-      skillArray: ['a'],
-      //create the default skill
-      skill: new Skill(0, "Coding"),
+      skillArray: [new Skill(0,"Coding")],
     };
   };
 
@@ -29,12 +27,19 @@ export default class Skills extends Component{
         to the skills array. 
         */}
         <SkillsContainer skillArray={this.state.skillArray} />
-        {/* the below onClick function is USED ONLY FOR DEBUGGING it can be removed once the skillArray sucessfully updates */}
-        <img className='add' onClick={()=>{this.setState({skillArray: ['b']})}} alt='add' src={addImg} />
+        <img className='add' onClick={()=>{this.addSkill(new Skill(0,'Placeholder'))}} alt='add' src={addImg} />
       </div>
     );
   };
+
+  addSkill(skill){
+    this.setState({
+      skillArray: this.state.skillArray.concat(skill),
+    });
+    console.log(this.state.skillArray);
+  };
 };
+
 
 /*
 example skill item layout
