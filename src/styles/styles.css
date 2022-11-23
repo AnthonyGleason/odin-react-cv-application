@@ -1,5 +1,5 @@
 body {
-  background-color: gray;
+  background-color: peachpuff;
 }
 
 /* edit image styling */
@@ -23,4 +23,11 @@ body {
 .general .linkedin-img {
   height: 30px;
   width: 30px;
+}
+
+/* skills section */
+
+.add,
+.remove {
+  cursor: pointer;
 }

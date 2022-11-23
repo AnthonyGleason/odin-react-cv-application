@@ -142,4 +142,4 @@ export default class General extends Component{
   changeLinkedin(newLinkedin){
     this.setState({linkedin: newLinkedin});
   };
-}
+};
