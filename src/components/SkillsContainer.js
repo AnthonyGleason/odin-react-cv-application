@@ -4,19 +4,54 @@ import starOutline from '../assets/star-outline.svg';
 import starFilled from '../assets/star.svg';
 import starHalf from '../assets/star-half.svg';
 import removeImg from '../assets/remove.svg';
-
+import edit from '../assets/edit.svg';
 const SkillsContainer = (props) =>{
   return(
     <ul>
       {props.skillArray.map((skill)=>{
         return(
           <li key={skill.id}>
-            {skill.skillTitle} {getStars(skill)} <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))}></img>
+            {/* This entire div with the className 'skill-item' will be hidden when the edit button is pressed */}
+            <div className="skill-item" id={skill.id+'-skill'}>
+              {skill.skillTitle}
+              {getStars(skill)}
+              <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))} />
+            </div>
+            {/* hidden by default, only shown when the edit button is clicked */}
+            <form className='skill-form' id={skill.id+'-form'} style={{display: 'none'}}>
+              <label>Skill Title: </label>
+              <input value={skill.skillTitle} onChange={(e)=>{handleSkillTitleInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}></input>
+              <label>Star Count: </label>
+              <input value={skill.starCount} onChange={(e)=>{handleSkillStarInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}></input>
+            </form>
+            <img className='edit' alt='edit button' src={edit} onClick={()=>toggleSkillForm(skill.id)} />
           </li>
         );
       })}
     </ul>
   );
+};
+
+let handleSkillTitleInput = function(titleValue, skill, setSkill, index){
+  setSkill(titleValue, skill.starCount, index);
+};
+
+let handleSkillStarInput = function(starCountValue, skill, setSkill, index){
+  setSkill(skill.skillTitle, starCountValue, index);
+};
+
+let toggleSkillForm = function(id){
+  //get the skill div by looking for an element with an id of the skill key.
+  let skillItem = document.querySelector('#'+id+'-skill');
+  //get the form in the same manner as the skill item div 
+  let skillForm = document.querySelector('#'+id+'-form');
+  if (skillItem.style.display!=='none'){
+    skillItem.style.display='none';
+    skillForm.style.display='block';
+  }else{
+    skillItem.style.display='block';
+    skillForm.style.display='none';
+  };
 };
 
 let getStars = function(skill){

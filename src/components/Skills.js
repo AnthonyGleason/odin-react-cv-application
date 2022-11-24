@@ -24,7 +24,7 @@ export default class Skills extends Component{
         <div className='content-title'>Skills</div>
         {/* The below container houses all of the skill items and will automatically update when new skills are added
         to the skills array. */}
-        <SkillsContainer skillArray={this.state.skillArray} removeSkill={this.removeSkill.bind(this)}/>
+        <SkillsContainer skillArray={this.state.skillArray} removeSkill={this.removeSkill.bind(this)} setSkill={this.setSkill.bind(this)} />
         <img className='add' onClick={()=>{this.addSkill(new Skill(0,'Placeholder'))}} alt='add' src={addImg} />
       </div>
     );
@@ -39,6 +39,18 @@ export default class Skills extends Component{
   removeSkill(index){
     let tempArray = this.state.skillArray;
     tempArray.splice(index, 1);
+    this.setState({
+      skillArray: tempArray,
+    });
+  };
+
+  setSkill(title, count, index){
+    //make a copy of the array
+    let tempArray = this.state.skillArray;
+    //update the skill at given index
+    tempArray[index].skillTitle=title;
+    tempArray[index].starCount=count;
+    //update the array
     this.setState({
       skillArray: tempArray,
     });
