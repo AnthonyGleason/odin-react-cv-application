@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 //Import images
 import starOutline from '../assets/star-outline.svg';
 import starFilled from '../assets/star.svg';
@@ -11,12 +11,12 @@ const SkillsContainer = (props) =>{
       {props.skillArray.map((skill)=>{
         return(
           <li key={skill.id}>
-            {skill.skillTitle} {getStars(skill)} <img className='remove' alt='remove button' src={removeImg}></img>
+            {skill.skillTitle} {getStars(skill)} <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))}></img>
           </li>
         );
       })}
     </ul>
-  )
+  );
 };
 
 let getStars = function(skill){
@@ -61,7 +61,7 @@ let getStars = function(skill){
       };
     };
   };
-  
+
   return (
   <>
     <img alt='star' src={starArray[0]}></img>
