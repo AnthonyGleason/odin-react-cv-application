@@ -15,7 +15,6 @@ const SkillsContainer = (props) =>{
             <div className="skill-item" id={skill.id+'-skill'}>
               {skill.skillTitle}
               {getStars(skill)}
-              <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))} />
             </div>
             {/* hidden by default, only shown when the edit button is clicked */}
             <form className='skill-form' id={skill.id+'-form'} style={{display: 'none'}}>
@@ -25,6 +24,7 @@ const SkillsContainer = (props) =>{
               <input value={skill.starCount} onChange={(e)=>{handleSkillStarInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}></input>
             </form>
             <img className='edit' alt='edit button' src={edit} onClick={()=>toggleSkillForm(skill.id)} />
+            <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))} />
           </li>
         );
       })}
