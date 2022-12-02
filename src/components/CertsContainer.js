@@ -16,9 +16,9 @@ const CertsContainer = function(props){
             </div>
             <form className='cert-form' id={cert.id+'-form'} style={{display: 'none'}}>
               <label>Certification Title: </label>
-              <input></input>
+              <input value={cert.certTitle} onChange={(e)=>{handleCertTitleInput(e.target.value,cert,props.setCert,props.certArray.indexOf(cert))}}></input>
               <label>Date Acquired: </label>
-              <input></input>
+              <input value={cert.dateAcquired} onChange={(e)=>{handleCertDateInput(e.target.value,cert,props.setCert,props.certArray.indexOf(cert))}}></input>
             </form>
             <img className='edit' alt='edit cert' src={edit} onClick={()=>toggleCertForm(cert.id)}></img>
             <img className='remove' alt='remove cert' src={remove} onClick={()=>props.removeCert(props.certArray.indexOf(cert))}></img>
@@ -28,6 +28,14 @@ const CertsContainer = function(props){
     </ul>
   )
 }
+
+let handleCertTitleInput = function(title, cert, setCert, index){
+  setCert(title, cert.dateAcquired, index);
+};
+
+let handleCertDateInput = function(date, cert, setCert, index){
+  setCert(cert.certTitle, date, index);
+};
 
 let toggleCertForm = function(id){
   //get the cert item div

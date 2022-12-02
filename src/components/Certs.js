@@ -22,7 +22,7 @@ export default class Certs extends Component{
     return(
       <div className='certs'>
         <div className='content-title'>Certifications</div>
-        <CertsContainer certArray={this.state.certArray} removeCert={this.removeCert.bind(this)} />
+        <CertsContainer certArray={this.state.certArray} removeCert={this.removeCert.bind(this)} setCert={this.setCert.bind(this)} />
         <img className='add' src={add} onClick={()=>this.addCert(new Cert('Placeholder', 'March, 1st, 2022'))} alt='add a certification' />
       </div>
     );
@@ -33,12 +33,24 @@ export default class Certs extends Component{
       certArray: this.state.certArray.concat(cert),
     });
   };
+
   removeCert(index){
     //get the current cert array
     let tempArray=this.state.certArray;
     //remove the cert at index
     tempArray.splice(index,1);
     //update the state with the tempArray
+    this.setState({
+      certArray: tempArray,
+    });
+  };
+
+  setCert(title, date, index){
+    //create a copy of the cert array
+    let tempArray=this.state.certArray;
+    //update the cert at the array
+    tempArray[index].certTitle=title;
+    tempArray[index].dateAcquired=date;
     this.setState({
       certArray: tempArray,
     });
