@@ -13,8 +13,8 @@ const SkillsContainer = (props) =>{
           <li key={skill.id}>
             {/* This entire div with the className 'skill-item' will be hidden when the edit button is pressed */}
             <div className="skill-item" id={skill.id+'-skill'}>
-              {skill.skillTitle}
-              {getStars(skill)}
+              <p className="skill-title">{skill.skillTitle}</p>
+              <p className="skill-stars">{getStars(skill)}</p>
             </div>
             {/* hidden by default, only shown when the edit button is clicked */}
             <form className='skill-form' id={skill.id+'-form'} style={{display: 'none'}}>

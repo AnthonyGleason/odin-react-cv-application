@@ -7,7 +7,7 @@ export default class General extends Component{
     super();
     this.state = {
       /* Put default states here */
-      name: 'John Smith',
+      name: 'Your Name',
       phoneNumber: '123-456-7890',
       address: '123 E Broadway, New York, NY 10002',
       linkedin: 'https://www.linkedin.com',

@@ -10,6 +10,7 @@ class Cert{
     this.id = uniquid();
   };
 };
+
 export default class Certs extends Component{
   constructor(){
     super();
@@ -55,4 +56,4 @@ export default class Certs extends Component{
       certArray: tempArray,
     });
   };
-}
+};

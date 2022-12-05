@@ -9,10 +9,9 @@ const CertsContainer = function(props){
       {props.certArray.map((cert)=>{
         return(
           <li key={cert.id}>
-            {/* Working within here set this up similarly to the skill container section */}
             <div className='cert-item' id={cert.id+'-cert'}>
-              {cert.certTitle}
-              {cert.dateAcquired}
+              <p className='cert-title'>{cert.certTitle}</p>
+              <p className='cert-date-acq'>{cert.dateAcquired}</p>
             </div>
             <form className='cert-form' id={cert.id+'-form'} style={{display: 'none'}}>
               <label>Certification Title: </label>
