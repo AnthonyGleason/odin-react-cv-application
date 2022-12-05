@@ -11,8 +11,7 @@ const EducationContainer = function (props){
                         {/* This div will be hidden when the edit button is pressed */}
                         <div className='edu-item' id={edu.id+'-edu'}>
                             <p className='edu-degree'>{edu.degree}</p>
-                            <p className='edu-ystart'>{edu.ystart}</p>
-                            <p className='edu-yend'>{edu.yend}</p>
+                            <p className='edu-year'>{edu.ystart} - {edu.yend}</p>
                             <p className='edu-school'>{edu.school}</p>
                             <p className='edu-location'>{edu.location}</p>
                         </div>
