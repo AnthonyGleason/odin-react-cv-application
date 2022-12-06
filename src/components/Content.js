@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Education from "./Education";
 import Work from "./Work";
 import Certs from "./Certs";
+import '../styles/Content.css';
 
 export default class Content extends Component {
   render(){

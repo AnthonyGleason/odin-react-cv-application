@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import SkillsContainer from "./SkillsContainer";
 import uniqid from "uniqid";
 import addImg from '../assets/add.svg';
+import '../styles/Skills.css';
 
 class Skill{
   constructor(starCount, skillTitle){

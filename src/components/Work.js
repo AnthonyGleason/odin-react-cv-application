@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import uniqid from "uniqid";
 import WorkContainer from "./WorkContainer";
 import add from "../assets/add.svg";
+import '../styles/Work.css';
 
 class WorkItem{
   constructor(title,ystart,yend,location,duties){

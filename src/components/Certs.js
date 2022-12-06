@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import add from '../assets/add.svg';
 import CertsContainer from './CertsContainer';
 import uniquid from 'uniqid';
+import '../styles/Certs.css';
 
 class Cert{
   constructor(certTitle, dateAcquired){

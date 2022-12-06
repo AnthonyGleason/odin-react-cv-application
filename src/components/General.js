@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import edit from '../assets/edit.svg';
 import linkedinLogo from '../assets/linkedin.svg';
+import '../styles/General.css';
 
 export default class General extends Component{
   constructor(){

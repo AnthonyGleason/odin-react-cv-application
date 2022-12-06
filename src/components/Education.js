@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import add from "../assets/add.svg";
 import uniquid from "uniqid";
 import EducationContainer from "./EducationContainer";
+import '../styles/Education.css';
 
 class Edu{
   constructor(degree,ystart,yend,school,location){
