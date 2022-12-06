@@ -18,7 +18,7 @@ export default class Work extends Component{
   constructor(){
     super();
     this.state = {
-      workArray: [new WorkItem('Web Developer', '2022', 'Present', 'New York', 'Working on the Odin Project!')],
+      workArray: [new WorkItem('Web Developer', '2022', 'Present', 'New York, New York', 'Working on the Odin Project!')],
     };
   }
 
@@ -27,7 +27,7 @@ export default class Work extends Component{
       <div className="work">
         <div className="content-title">Work Experience</div>
         <WorkContainer workArray={this.state.workArray} setWorkItem={this.setWorkItem.bind(this)} removeWorkItem={this.removeWorkItem.bind(this)}/>
-        <img className="add" onClick={()=>{this.addWorkItem(new WorkItem('Web Developer','2022', 'Present','New York', 'Placeholder'))}} src={add} alt='add a work item' />
+        <img className="add" onClick={()=>{this.addWorkItem(new WorkItem('Position Title', 'Stating Year', 'Ending Year', 'City, State', 'Duties'))}} src={add} alt='add a work item' />
       </div>
     )
   }

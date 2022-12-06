@@ -26,7 +26,7 @@ export default class Skills extends Component{
         {/* The below container houses all of the skill items and will automatically update when new skills are added
         to the skills array. */}
         <SkillsContainer skillArray={this.state.skillArray} removeSkill={this.removeSkill.bind(this)} setSkill={this.setSkill.bind(this)} />
-        <img className='add' onClick={()=>{this.addSkill(new Skill(0,'Placeholder'))}} alt='add' src={addImg} />
+        <img className='add' onClick={()=>{this.addSkill(new Skill(0,'Skill'))}} alt='add' src={addImg} />
       </div>
     );
   };

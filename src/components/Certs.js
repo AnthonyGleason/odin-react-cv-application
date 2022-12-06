@@ -25,7 +25,7 @@ export default class Certs extends Component{
       <div className='certs'>
         <div className='content-title'>Certifications</div>
         <CertsContainer certArray={this.state.certArray} removeCert={this.removeCert.bind(this)} setCert={this.setCert.bind(this)} />
-        <img className='add' src={add} onClick={()=>this.addCert(new Cert('Placeholder', 'March, 1st, 2022'))} alt='add a certification' />
+        <img className='add' src={add} onClick={()=>this.addCert(new Cert('Certification', 'Date Acquired'))} alt='add a certification' />
       </div>
     );
   };

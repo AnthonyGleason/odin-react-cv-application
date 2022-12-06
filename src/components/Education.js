@@ -28,7 +28,7 @@ export default class Education extends Component{
         <div className="content-title">Education</div>
         {/* Below is the education content component which houses education items*/}
         <EducationContainer eduArray={this.state.eduArray} addEdu={this.addEdu.bind(this)} setEdu={this.setEdu.bind(this)} removeEdu={this.removeEdu.bind(this)} />
-        <img className="add" src={add} alt="add an education item" onClick={()=>{this.addEdu(new Edu("Degree Placeholder", "2018", "2022", "Odin University", "City, State"))}} />
+        <img className="add" src={add} alt="add an education item" onClick={()=>{this.addEdu(new Edu("Degree", "Starting Year", "Ending Year", "School Attended", "City, State"))}} />
       </div>
     );
   };

@@ -1,0 +1,38 @@
+.content{
+  margin: 10px;
+  border-radius: 15px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas: 
+  "general work"
+  "education work"
+  "skills certs";
+}
+
+.content-title{
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+}
+
+.general{
+  grid-area: general;
+}
+
+.skills{
+  grid-area: skills;
+}
+
+.education{
+  grid-area: education;
+}
+
+.work{
+  grid-area: work;
+}
+
+.certs{
+  grid-area: certs;
+}
