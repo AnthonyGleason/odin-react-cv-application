@@ -18,7 +18,7 @@ export default class Education extends Component{
   constructor(){
     super();
     this.state = {
-      eduArray: [new Edu("Computer Science", "2018", "2022", "Odin University", "New York, New York")],
+      eduArray: [new Edu("High School Diploma", "2013", "2017", "Odin High School", "New York, New York"),new Edu("Computer Science", "2018", "2022", "Odin University", "New York, New York")],
     };
   };
 

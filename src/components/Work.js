@@ -18,7 +18,7 @@ export default class Work extends Component{
   constructor(){
     super();
     this.state = {
-      workArray: [new WorkItem('Web Developer', '2022', 'Present', 'New York, New York', 'Working on the Odin Project!')],
+      workArray: [new WorkItem('Waiter','2019','2022','New York, New York','Provide great customer service in a fast paced enviornment, seat, take orders, bring out food and bill patrons. Mantain a clean and presentable work area.'), new WorkItem('Web Developer', '2022', 'Present', 'New York, New York', 'Working on the Odin Project! Learned HTML, CSS, Javascript, React and Jest')],
     };
   }
 

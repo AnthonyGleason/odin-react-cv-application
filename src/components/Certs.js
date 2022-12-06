@@ -16,7 +16,7 @@ export default class Certs extends Component{
   constructor(){
     super();
     this.state = {
-      certArray: [new Cert('Comptia A+', 'July, 5th, 2021')],
+      certArray: [new Cert('CompTIA A+','March, 11th, 2020'),new Cert('CompTIA Network+', 'July, 5th, 2021'), new Cert('CompTIA Security+', 'September 2nd, 2022')],
     };
   };
 

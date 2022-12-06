@@ -15,7 +15,7 @@ export default class Skills extends Component{
   constructor(){
     super();
     this.state = {
-      skillArray: [new Skill(5,"Microsoft Office")],
+      skillArray: [new Skill(5,"Microsoft Word"), new Skill(5,"Microsoft Powerpoint"),new Skill(4,"Microsoft Excel"),new Skill(3.5,"Adobe Photoshop")],
     };
   };
 
