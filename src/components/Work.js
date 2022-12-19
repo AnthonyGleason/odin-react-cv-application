@@ -4,8 +4,6 @@ import WorkContainer from "./WorkContainer";
 import add from "../assets/add.svg";
 import '../styles/Work.css';
 
-//in the work experience section an option needs to be
-//added to add a company name
 class WorkItem{
   constructor(title,company,ystart,yend,location,duties){
     this.title=title;

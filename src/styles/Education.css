@@ -1,0 +1,13 @@
+.education ul{
+  list-style-position: inside;
+}
+
+.education{
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-form{
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+}

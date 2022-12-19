@@ -52,9 +52,9 @@ let toggleForm = function(id){
   //check to see if the work item is displayed then toggle display for each
   if (workItem.style.display!=='none'){
     workItem.style.display='none';
-    workForm.style.display='block';
+    workForm.style.display='grid';
   }else{
-    workItem.style.display='block';
+    workItem.style.display='grid';
     workForm.style.display='none';
   };
 };

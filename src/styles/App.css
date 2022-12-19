@@ -31,6 +31,29 @@ body{
 .content{
   align-self: center;
   flex-grow: 1;
-  width: 50%;
+  width: 75%;
   background-color: ghostwhite
+}
+
+/* title padding */
+.content-title{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.add{
+  height: 25px;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 5px;
+}
+.remove{
+  cursor: pointer;
+  height: 25px;
+  padding: 5px;
+}
+.edit{
+  height: 25px;
+  cursor: pointer;
+  padding: 5px;
 }

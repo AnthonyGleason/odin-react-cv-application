@@ -44,9 +44,9 @@ let toggleCertForm = function(id){
   //toggle the form for the cert item by checking to see if the certItem is displayed
   if (certItem.style.display!=='none'){
     certItem.style.display='none';
-    certForm.style.display='block';
+    certForm.style.display='grid';
   }else{
-    certItem.style.display='block';
+    certItem.style.display='grid';
     certForm.style.display='none';
   }
 };

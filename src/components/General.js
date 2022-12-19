@@ -75,9 +75,9 @@ export default class General extends Component{
     //check for current display status and then toggle the display status of those elements
     if (nameTextField.style.display!=='none'){
       nameTextField.style.display='none';
-      nameForm.style.display='block';
+      nameForm.style.display='grid';
     }else{
-      nameTextField.style.display='block';
+      nameTextField.style.display='grid';
       nameForm.style.display='none';
     }
   };
@@ -89,9 +89,9 @@ export default class General extends Component{
     //check for current display status and then toggle the display status of those elements
     if (phoneNumberTextField.style.display!=='none'){
       phoneNumberTextField.style.display='none';
-      phoneNumberForm.style.display='block';
+      phoneNumberForm.style.display='grid';
     }else{
-      phoneNumberTextField.style.display='block';
+      phoneNumberTextField.style.display='grid';
       phoneNumberForm.style.display='none';
     }
   };
@@ -103,9 +103,9 @@ export default class General extends Component{
     //check for current display status and then toggle the display status of those elements
     if (addressTextField.style.display!=='none'){
       addressTextField.style.display='none';
-      addressForm.style.display='block';
+      addressForm.style.display='grid';
     }else{
-      addressTextField.style.display='block';
+      addressTextField.style.display='grid';
       addressForm.style.display='none';
     }
   };
@@ -117,9 +117,9 @@ export default class General extends Component{
     //check for current display status and then toggle the display status of those elements
     if (linkedinTextField.style.display!=='none'){
       linkedinTextField.style.display='none';
-      linkedinForm.style.display='block';
+      linkedinForm.style.display='grid';
     }else{
-      linkedinTextField.style.display='block';
+      linkedinTextField.style.display='grid';
       linkedinForm.style.display='none';
     }
   };

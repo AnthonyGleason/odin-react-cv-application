@@ -48,9 +48,9 @@ let toggleForm = function(id){
     //check to see if the edu item is shown and then toggle the display for both the form and edu item
     if (eduItem.style.display!=='none'){
         eduItem.style.display='none';
-        eduForm.style.display='block';
+        eduForm.style.display='grid';
     }else{
-        eduItem.style.display='block';
+        eduItem.style.display='grid';
         eduForm.style.display='none';
     }
 };
