@@ -21,7 +21,7 @@ const SkillsContainer = (props) =>{
               <label>Skill Title: </label>
               <input value={skill.skillTitle} onChange={(e)=>{handleSkillTitleInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}></input>
               <label>Star Count: </label>
-              <input value={skill.starCount} onChange={(e)=>{handleSkillStarInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}></input>
+              <input value={skill.starCount} onChange={(e)=>{if (validateStars(e.target.value)){handleSkillStarInput(e.target.value, skill, props.setSkill, props.skillArray.indexOf(skill))}}}></input>
             </form>
             <img className='edit' alt='edit button' src={edit} onClick={()=>toggleSkillForm(skill.id)} />
             <img className='remove' alt='remove button' src={removeImg} onClick={()=>props.removeSkill(props.skillArray.indexOf(skill))} />
@@ -53,6 +53,35 @@ let toggleSkillForm = function(id){
     skillForm.style.display='none';
   };
 };
+//acceptable star inputs
+let validateStars= function(input){
+  switch(input){
+    case '':
+      return true;
+    case '0':
+      return true;
+    case '1':
+      return true;
+    case '1.5':
+      return true;
+    case '2':
+      return true;
+    case '2.5':
+      return true;
+    case '3':
+      return true;
+    case '3.5':
+      return true;
+    case '4':
+      return true;
+    case '4.5':
+      return true;
+    case '5':
+      return true;
+    default:
+      return true;
+  };
+};
 
 let getStars = function(skill){
   //star array stores if the star is filled or not (or half star if applicable)
@@ -61,10 +90,12 @@ let getStars = function(skill){
   //copy the starcount to avoid modifying the original value
   let starCount = skill.starCount;
 
+  if (starCount==='') starCount=0;
+
   //dynamically render stars by addind stars to starArray
   while (starArray.length<5){
     //check to see if the starCount is 0, this will fill the remaining stars with an empty star outline
-    if (starCount===0){
+    if (starCount===0 || starCount==='0'){
       starArray.push(starOutline);
     //check to see if the starCount is greater than 0, this will fill either a half star or full star
     } else if (starCount>0){
