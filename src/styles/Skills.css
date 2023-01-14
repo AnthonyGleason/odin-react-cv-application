@@ -1,8 +1,0 @@
-.skills ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  list-style-position: inside;
-}
-.skills ul li{
-  padding: 5px;
-}
